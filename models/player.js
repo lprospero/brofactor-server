@@ -10,7 +10,8 @@ const playerScehma = mongoose.Schema({
     awards: [{
         sponsor: String,
         award: String,
-        dateCreated : Date
+        dateCreated: Date,
+        note: String
     }],
     email: String,
     password: String,

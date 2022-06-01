@@ -60,9 +60,10 @@ router.patch("/:id/award/", async (req, res) => {
         const updatedPlayer = await Player.findByIdAndUpdate(id, {
             awards: [...player.awards,
                 {
-                    sponsor: body.sponsor.id,
+                    sponsor: body.sponsor,
                     award: body.award,
-                    dateCreated: new Date()
+                    dateCreated: new Date(),
+                    note: body.note
                 }
             ]
         }, { new: true });

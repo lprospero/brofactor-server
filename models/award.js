@@ -5,6 +5,7 @@ const awardSchema = mongoose.Schema({
     experience: Number,
     type: Number,
     avatar: String,
+    note: String
 });
 
 const Award = mongoose.model("Award", awardSchema);
